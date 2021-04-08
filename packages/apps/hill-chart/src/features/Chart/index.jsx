@@ -105,10 +105,5 @@ export default function Chart() {
 
   if (!chartRef) return null
 
-  return (
-    <>
-      <h2>Start a new Hill Chart</h2>
-      <div ref={chartRef}></div>
-    </>
-  )
+  return <div ref={chartRef}></div>
 }
