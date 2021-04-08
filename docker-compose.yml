@@ -1,0 +1,42 @@
+version: '3.6'
+
+services:
+  strapi.simple-app:
+    container_name: strapi.simple-app
+    image: strapi/strapi
+    restart: unless-stopped
+    env_file:
+      - ./.env
+      - ./.env.local
+    volumes:
+    # scenario: I want to be able to see and edit stuff 
+    # in the mounted volume
+    - ./packages/apps/cms:/srv/app
+    ports:
+      - 1337:1337
+    depends_on:
+      - mongo.simple-app
+    links:
+      - mongo.simple-app:mongo
+
+  mongo.simple-app:
+    container_name: mongo.simple-app
+    image: mongo
+    env_file:
+      - ./.env
+      - ./.env.local
+    restart: unless-stopped
+    volumes:
+    # scenario: I want a mounted volume to persist state,
+    # but I won't be directly changing what's in it
+    - data-vol:/etc/mongo
+
+volumes:
+  # Defining the volume used by mongo.simple-app
+  data-vol:
+    name: data-simple-app-vol
+
+networks:
+  default:
+    name: simple-app-network
+    driver: bridge

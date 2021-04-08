@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+      "name": "Repo",
+			"path": "."
+		}, 
+    {
+      "name": "CMS",
+      "path": "packages/apps/cms",
+    },
+    {
+      "name": "Hello app",
+      "path": "packages/apps/hello-simple-app"
+    }
+  ],
+  "settings": {
+    "window.zoomLevel": 2,
+    "terminal.integrated.fontSize": 18
+  }
+}

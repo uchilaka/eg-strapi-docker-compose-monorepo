@@ -1,0 +1,16 @@
+{
+  "name": "@uche-and-sean/simple-app",
+  "version": "1.0.0",
+  "scripts": {
+    "log": "docker-compose logs --tail 25 --follow",
+    "up": "docker-compose up -d && yarn log",
+    "down": "docker-compose down",
+    "status": "docker-compose ps",
+    "debug:cms": "docker exec -it strapi.simple-app /bin/bash",
+    "data:ui": "scripts/mongo-express.sh",
+    "data:ui:down": "docker stop mongo-express.simple-app && docker rm mongo-express.simple-app"
+  },
+  "author": "Uche Chilaka, Sean Nemann",
+  "license": "MIT",
+  "private": false
+}
