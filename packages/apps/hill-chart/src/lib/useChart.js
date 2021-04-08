@@ -1,4 +1,6 @@
-const useChart = (useDataCallback) => function define(runtime, observer) {
+import noop from 'lodash-es/noop'
+
+const useChart = (useDataCallback, dragCallback = noop) => function define(runtime, observer) {
   const main = runtime.module();
   main.variable(observer()).define(['md'], (md) => (
     md`# Hill Charts`
@@ -67,6 +69,8 @@ const useChart = (useDataCallback) => function define(runtime, observer) {
            * changed to persist the state of the hill chart
            */
           d.x = xPoint;
+          
+          dragCallback(d)
 
           d3.select(this).attr('transform', `translate(${xScale(xPoint)}, ${yScale(translateXtoY(xPoint))})`);
         });

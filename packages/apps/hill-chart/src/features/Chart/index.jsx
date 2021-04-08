@@ -90,11 +90,12 @@ export default function Chart() {
   const [runtime] = React.useState(() => new Runtime())
 
   const chartDataCallback = React.useCallback(() => sampleData, [sampleData])
-  // function chartDataCallback() {
-  //   return sampleData;
-  // }
 
-  const define = useChart(chartDataCallback)
+  const dragCallback = React.useCallback((point) => {
+    console.debug('will update point:', point)
+  }, [])
+
+  const define = useChart(chartDataCallback, dragCallback)
 
   React.useEffect(() => {
     if (chartRef.current) {
