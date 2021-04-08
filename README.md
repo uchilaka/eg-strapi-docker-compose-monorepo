@@ -4,6 +4,12 @@
 
 This came out of an awesome jam session with [Sean](https://github.com/seannemann21)!
 
+## Who's this for?
+
+Any engineer new to containerization (running full operating systems, virtualized on a host machine e.g. your laptop) looking to get started using `docker` and `docker-compose` via an example.
+
+## A few notes about this code
+
 This example uses a simple app use case (frontend app + backend CMS) to demonstrate how docker + docker-compose can level up your local development game. **Strapi is simply something I'm quite familiar with. This is not an endorsement**.
 
 > Opinion alert
