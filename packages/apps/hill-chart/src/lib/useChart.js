@@ -62,6 +62,10 @@ const useChart = (useDataCallback) => function define(runtime, observer) {
             xPoint = 100;
           }
 
+          /**
+           * @Todo figure out how to callback when a point is 
+           * changed to persist the state of the hill chart
+           */
           d.x = xPoint;
 
           d3.select(this).attr('transform', `translate(${xScale(xPoint)}, ${yScale(translateXtoY(xPoint))})`);

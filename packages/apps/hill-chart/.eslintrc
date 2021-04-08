@@ -1,14 +1,14 @@
 {
   "extends": [
     "../../../.eslintrc",
+    // "prettier", // eslint-config-prettier
+    "eslint-config-airbnb-base/whitespace",
     "plugin:@typescript-eslint/recommended",
-    // "plugin:prettier/recommended",
-    // "eslint-config-airbnb-base/whitespace",
-    "plugin:import/typescript",
-    "eslint-config-prettier"
-
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/typescript"
   ],
   "plugins": [
+    "@typescript-eslint", // Docs: https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin
     "import",
     "prettier" 
   ],
@@ -17,9 +17,10 @@
     "tsconfigRootDir": "./"
   },
   "ignorePatterns": [
-    "src/lib/runtime.js",
+    "src/lib/useChart.js",
     "src/reportWebVitals.ts",
-    "config-overrides.js"
+    "config-overrides.js",
+    "**/*.jsx"
   ],
   "settings": {
     "import/parsers": {
