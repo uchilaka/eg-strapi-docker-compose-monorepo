@@ -1,5 +1,17 @@
 {
-  "extends": "../../../.eslintrc",
+  "extends": [
+    "../../../.eslintrc",
+    "plugin:@typescript-eslint/recommended",
+    // "plugin:prettier/recommended",
+    // "eslint-config-airbnb-base/whitespace",
+    "plugin:import/typescript",
+    "eslint-config-prettier"
+
+  ],
+  "plugins": [
+    "import",
+    "prettier" 
+  ],
   "parserOptions": {
     "project": "./tsconfig.json",
     "tsconfigRootDir": "./"
@@ -11,13 +23,11 @@
   ],
   "settings": {
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts"]
-      //// Required to work with eslint: 
-      // , "import/resolver": {
-      //   "typescript": {
-      //     "project": "tsconfig.json"
-      //   }
-      // }
+      "@typescript-eslint/parser": [".ts", ".tsx", ".js", ".jsx"]
     }
+  },
+  "rules": {
+    "quotes": ["warn", "single"],
+    "semi": ["warn", "never"]
   }
 }
