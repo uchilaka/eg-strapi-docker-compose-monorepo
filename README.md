@@ -20,7 +20,7 @@ That said, `docker` + `docker-compose` makes it pretty easy. I'll have to revisi
   - Docker (required)
   - Docker Compose (required)
 
-## Filesystem
+## Monorepo filesystem
 
 ```shell
 .
@@ -34,11 +34,11 @@ That said, `docker` + `docker-compose` makes it pretty easy. I'll have to revisi
 
 ## Setup your (local) environment
 
-> You're missing your `env.local` file!
+> PS: You're missing your `env.local` file!
 
 ### Step 1: Create the `.env.local` file
 
-### Step 2: Customize your environment variables
+### Step 2: Define / customize your environment variables
 
 Next, copy over the following contents and set your database credentials. You can leave in the defaults (`strapi:strapi` in basic auth notation) if you're just getting your local dev environment going.
 
