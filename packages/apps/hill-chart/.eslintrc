@@ -1,0 +1,23 @@
+{
+  "extends": "../../../.eslintrc",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "tsconfigRootDir": "./"
+  },
+  "ignorePatterns": [
+    "src/lib/runtime.js",
+    "src/reportWebVitals.ts",
+    "config-overrides.js"
+  ],
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts"]
+      //// Required to work with eslint: 
+      // , "import/resolver": {
+      //   "typescript": {
+      //     "project": "tsconfig.json"
+      //   }
+      // }
+    }
+  }
+}

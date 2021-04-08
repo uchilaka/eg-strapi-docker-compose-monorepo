@@ -9,12 +9,18 @@
       "path": "packages/apps/cms",
     },
     {
-      "name": "Hello app",
-      "path": "packages/apps/hello-simple-app"
+      "name": "Hill Chart",
+      "path": "packages/apps/hill-chart"
     }
   ],
   "settings": {
     "window.zoomLevel": 2,
-    "terminal.integrated.fontSize": 18
+    "terminal.integrated.fontSize": 18,
+    "editor.formatOnPaste": true,
+    "editor.formatOnType": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
   }
 }

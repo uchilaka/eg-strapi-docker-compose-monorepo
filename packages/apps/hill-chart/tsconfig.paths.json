@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "dist",
+    "paths": {
+      "@feature/*": ["src/features/*"],
+      "@lib/*": ["src/lib/*"],
+      "@src/*": ["src/*"]
+    }
+  }
+}

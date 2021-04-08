@@ -12,5 +12,13 @@
   },
   "author": "Uche Chilaka, Sean Nemann",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "@typescript-eslint/parser": "^4.21.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "typescript": "^4.2.4"
+  }
 }
