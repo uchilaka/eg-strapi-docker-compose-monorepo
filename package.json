@@ -7,7 +7,7 @@
     "down": "docker-compose down",
     "status": "docker-compose ps",
     "debug:cms": "docker exec -it strapi.simple-app /bin/bash",
-    "up:dbadmin": "scripts/mongo-express.sh",
+    "dbadmin": "scripts/mongo-express.sh",
     "down:dbadmin": "docker stop mongo-express.simple-app && docker rm mongo-express.simple-app"
   },
   "author": "Uche Chilaka, Sean Nemann",

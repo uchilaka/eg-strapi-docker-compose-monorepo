@@ -14,11 +14,15 @@ With Sean!
 └── sam.code-workspace
 ```
 
-## Environment variables
+## Setup your (local) environment
 
-Review the comments in the [./.env](./env) file for notes on environment variables to get this example running.
+> You're missing your `env.local` file!
 
-Here's what my `.env.local` looked like
+### Step 1: Create the `.env.local` file
+
+### Step 2: Customize your environment variables
+
+Next, copy over the following contents and set your database credentials. You can leave in the defaults (`strapi:strapi` in basic auth notation) if you're just getting your local dev environment going.
 
 ```shell
 # file: .env.local
@@ -47,3 +51,12 @@ ME_CONFIG_MONGODB_ADMINUSERNAME="${DATABASE_USERNAME}"
 ME_CONFIG_MONGODB_ADMINPASSWORD="${DATABASE_PASSWORD}"
 
 ```
+
+The project's compose script for each service is setup to load [./.env](./env) first, and then your `.env.local` file - overwriting in the former any variables declared in the latter.
+
+These environment variables are also loaded by [./scripts/mongo-express.sh](./scripts/mongo-express.sh) for running the database admin app.
+
+## Starting your CMS
+
+- Run `yarn up`
+- To administer your mongo database(s), run `yarn db:admin` to run `mongo-express` as a standalone container in the same network (review the code to see how we do this with `docker run`)
