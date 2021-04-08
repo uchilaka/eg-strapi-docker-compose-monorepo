@@ -1,4 +1,4 @@
-# Simple App Monorepo
+# An Example Docker Compose(d) Monorepo
 
 > All commands should be run from the monorepo root.
 
@@ -6,7 +6,7 @@ This came out of an awesome jam session with [Sean](https://github.com/seanneman
 
 ## Who's this for?
 
-Any engineer new to containerization (running full operating systems, virtualized on a host machine e.g. your laptop) looking to get started using `docker` and `docker-compose` via an example.
+Any engineer new to containerization (running full operating systems, virtualized on a host machine e.g. your laptop), looking to get started using `docker` and `docker-compose` via an example.
 
 ## A few notes about this code
 
