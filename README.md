@@ -37,7 +37,7 @@ That said, `docker` + `docker-compose` makes it pretty easy. I'll have to revisi
 ├── packages
 │   └── apps
 │       ├── cms
-│       └── hello-simple-app
+│       └── hill-chart
 ├── sam.code-workspace
 └── scripts
     └── mongo-express.sh
