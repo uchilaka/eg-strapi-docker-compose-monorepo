@@ -78,7 +78,7 @@ SENDGRID_DEFAULT_REPLYTO=
 
 ```
 
-The project's compose script for each service is setup to load [./.env](./env) first, and then your `.env.local` file - overwriting in the former any variables declared in the latter.
+The project's compose script for each service is setup to load [./.env](./.env) first, and then your `.env.local` file - overwriting in the former any variables declared in the latter.
 
 These environment variables are also loaded by [./scripts/mongo-express.sh](./scripts/mongo-express.sh) for running the database admin app.
 
@@ -88,7 +88,7 @@ These environment variables are also loaded by [./scripts/mongo-express.sh](./sc
 - Visit <http://localhost:1337/admin> to get started setting up Strapi
 - To administer your mongo database(s), run `yarn db:admin` to run `mongo-express` as a standalone container in the same network (review the code to see how we do this with `docker run`)
 
-### Setup Plugins
+### Setup other plugins
 
 You can checkout a directory of plugins available for Strapi [here](https://github.com/strapi/awesome-strapi#CommunityPlugins).
 
