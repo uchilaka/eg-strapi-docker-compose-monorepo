@@ -1,8 +1,24 @@
 # Simple App Monorepo
 
-With Sean!
-
 > All commands should be run from the monorepo root.
+
+This came out of an awesome jam session with [Sean](https://github.com/seannemann21)!
+
+This example uses a simple app use case (frontend app + backend CMS) to demonstrate how docker + docker-compose can level up your local development game. **Strapi is simply something I'm quite familiar with. This is not an endorsement**.
+
+> Opinion alert
+
+If you're a budding engineer looking to learn about orchestration, it's probably more valuable to explore accomplishing this demo with Kubernetes instead (hint: minikube makes it easy to do kubernetes things locally). Perhaps we'll do a future example repo where we replicate this example solution in Kubernetes 🤞🏾
+
+That said, `docker` + `docker-compose` makes it pretty easy. I'll have to revisit this "easy" claim once I've looked into doing same with Kubernetes (I'd be learning when I do - just like you!).
+
+## Libraries / Tooling
+
+- React
+- Strapi
+- Docker Desktop (not required, but your life would be much easier)
+  - Docker (required)
+  - Docker Compose (required)
 
 ## Filesystem
 
@@ -68,7 +84,7 @@ These environment variables are also loaded by [./scripts/mongo-express.sh](./sc
 
 ## Starting your CMS
 
-- Run `yarn up`
+- Run `yarn up`. **The first time you do this will take a coffee break to run - installing node dependencies etc.**. Once that's done, it will be incremental for future stuff like installing a new Strapi plugin.
 - Visit <http://localhost:1337/admin> to get started setting up Strapi
 - To administer your mongo database(s), run `yarn db:admin` to run `mongo-express` as a standalone container in the same network (review the code to see how we do this with `docker run`)
 
