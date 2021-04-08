@@ -30,12 +30,18 @@ That said, `docker` + `docker-compose` makes it pretty easy. I'll have to revisi
 
 ```shell
 .
+├── Brewfile
 ├── README.md
 ├── docker-compose.yml
+├── package.json
 ├── packages
 │   └── apps
+│       ├── cms
 │       └── hello-simple-app
-└── sam.code-workspace
+├── sam.code-workspace
+└── scripts
+    └── mongo-express.sh
+    
 ```
 
 ## Setup your (local) environment
